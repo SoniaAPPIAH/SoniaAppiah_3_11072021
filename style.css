@@ -1,0 +1,55 @@
+
+header {
+    border: solid 1px #61b12f;
+    height: 8rem;
+}
+
+main {
+    max-width: 1440px;
+    margin: auto;
+    border: solid 1px #e7e128;
+}
+
+#Fonctionnement {
+    height: 15rem;
+    border: solid 1px #52abe0;
+}
+
+#Restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: solid 1px #52abe0;
+}
+
+.Restaurants_bloc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    min-width: 31rem;
+    justify-content: space-around;
+    border: solid 1px black;
+}
+
+#Restaurants article {
+    height: 15rem;
+    width: 40%;
+    border: solid 1px #e41944;
+}
+
+footer {
+    height: 5rem;
+    border: solid 1px #61b12f;
+}
+
+@media  screen and (max-width: 599px) {
+    .Restaurants_bloc {
+        min-width: 10rem;
+        width: 20rem;
+    }
+
+    #Restaurants article {
+        width: 100%; 
+    }
+
+}
