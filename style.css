@@ -1,55 +1,439 @@
 
+ html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  main {
+    display: block;
+  }
+  
+  h1 {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+  
+  hr {
+    box-sizing: content-box; 
+    height: 0; 
+    overflow: visible; 
+  }
+  
+  pre {
+    font-family: monospace, monospace; 
+    font-size: 1em; 
+  }
+  
+  a {
+    background-color: transparent;
+  }
+  
+  abbr[title] {
+    border-bottom: none; 
+    text-decoration: underline; 
+    text-decoration: underline dotted; 
+  }
+
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  code,
+  kbd,
+  samp {
+    font-family: monospace, monospace; 
+    font-size: 1em; 
+  }
+  
+  small {
+    font-size: 80%;
+  }
+  
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  
+  sub {
+    bottom: -0.25em;
+  }
+  
+  sup {
+    top: -0.5em;
+  }
+  
+  img {
+    border-style: none;
+  }
+  
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit; 
+    font-size: 100%; 
+    line-height: 1.15; 
+    margin: 0; 
+  }
+  
+  button,
+  input {
+    overflow: visible;
+  }
+  
+  button,
+  select { 
+    text-transform: none;
+  }
+  
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    -webkit-appearance: button;
+  }
+  
+  button::-moz-focus-inner,
+  [type="button"]::-moz-focus-inner,
+  [type="reset"]::-moz-focus-inner,
+  [type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+  
+  button:-moz-focusring,
+  [type="button"]:-moz-focusring,
+  [type="reset"]:-moz-focusring,
+  [type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+  
+  fieldset {
+    padding: 0.35em 0.75em 0.625em;
+  }
+  
+  legend {
+    box-sizing: border-box; 
+    color: inherit; 
+    display: table; 
+    max-width: 100%; 
+    padding: 0; 
+    white-space: normal; 
+  }
+  
+  progress {
+    vertical-align: baseline;
+  }
+
+  textarea {
+    overflow: auto;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    box-sizing: border-box; 
+    padding: 0; 
+  }
+  
+  [type="number"]::-webkit-inner-spin-button,
+  [type="number"]::-webkit-outer-spin-button {
+    height: auto;
+  }
+
+  [type="search"] {
+    -webkit-appearance: textfield; 
+    outline-offset: -2px; 
+  }
+
+  [type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+
+  ::-webkit-file-upload-button {
+    -webkit-appearance: button; 
+    font: inherit; 
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+ 
+  template {
+    display: none;
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  /* -------------------------------------------------- END OF NORMALIZE -------------------------------------------------- */
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('fonts/Shrikhand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('fonts/Roboto-Medium.ttf') format('truetype');
+}
+
+body {
+    background: url("images/background.jpg") repeat-x;
+    background-attachment: fixed;
+    font-family: 'Roboto Medium', sans-serif;
+}
+
+  /* -------------------------------------------------- HEADER -------------------------------------------------- */
+
 header {
-    border: solid 1px #61b12f;
-    height: 8rem;
+    text-align: center;
+    background-color: white;
+    padding: 1.5rem 0 0.5rem 0;
+    position: relative;
+    box-shadow: 0px 2px 10px 0px rgb(0 0 0 / 10%);
 }
 
-main {
-    max-width: 1440px;
+header img {
+  height: 2rem;
+}
+
+  /* -------------------------------------------------- MAIN - INTRODUCTION -------------------------------------------------- */
+
+#Localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eaeaea;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+}
+
+#Localisation i {
+  margin-right: 1.2rem;
+}
+
+#Localisation input {
+  background: none;
+  border: none;
+  width: 170px;
+}
+
+#Introduction {
+    background-color: #f6f6f6;
+    text-align: center;
+    padding: 1.5rem 0 3rem 0;
+}
+
+#Introduction p {
+  font-family: 'Roboto Light', sans-serif;
+  font-size: 1.5rem;
+}
+
+#Introduction input {
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  background: linear-gradient(175deg, #FF79dA, #9356DC);
+  height: 4rem;
+  width: 16rem;
+  border-radius: 30px;
+  margin: 1rem 0;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+}
+  /* -------------------------------------------------- MAIN - FUNCTIONING -------------------------------------------------- */
+
+.Functioning {
+    max-width: 1376px; /* 1440px - 64 (padding 2rem x2) */
     margin: auto;
-    border: solid 1px #e7e128;
+    background-color: white;
+    padding: 3rem 2rem 4rem 2rem;
 }
 
-#Fonctionnement {
-    height: 15rem;
-    border: solid 1px #52abe0;
+.Functioning__center {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
 }
 
-#Restaurants {
+.Functioning__button-bloc {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border: solid 1px #52abe0;
+
 }
 
-.Restaurants_bloc {
+.Functioning__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  padding: 0 3.8rem 0 2.2rem;
+  width: 13rem;
+  height: 4.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 10%);
+}
+
+
+.Functioning__button i {
+  color: #7e7e7e;
+  font-size: 1.3rem;
+}
+
+.Functioning__button p:nth-child(1) {
+  position: absolute;
+  left: -10px;
+  background-color: #9356DC;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.Functioning__button:hover {
+  background-color: rgb(147 86 220 / 10%);
+}
+  /* -------------------------------------------------- MAIN - RESTAURANTS -------------------------------------------------- */
+
+.Restaurants {
+    max-width: 1376px; /* 1440px - 64 (padding 2rem x2) */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    padding: 2.5rem 2rem 4rem 2rem;
+}
+
+.Restaurants__bloc {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
-    min-width: 31rem;
-    justify-content: space-around;
-    border: solid 1px black;
+    justify-content: space-between;
 }
 
-#Restaurants article {
+.Restaurants__bloc__tile {
+    position: relative;
     height: 15rem;
-    width: 40%;
-    border: solid 1px #e41944;
+    width: clamp(13rem, 22%, 45rem);
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 13px 10px 0px rgb(0 0 0 / 7%);
+    text-decoration: none;
+    margin-bottom: 1rem;
 }
+
+.Restaurants__bloc__tile img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.Restaurants__bloc__tile--tag {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: #008766;
+  background: #99e2d0;
+  padding: 6px 13px;
+  border-radius: 3px;
+}
+
+.Restaurants__bloc__tile__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  padding: 0 20px 0 15px;
+}
+
+.Restaurants__bloc__tile__text h3 {
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+.Restaurants__bloc__tile__text p {
+  margin: 0;
+  font-family: 'Roboto Light', sans-serif;
+}
+
+.Restaurants__bloc__tile__text i {
+  font-size: 1.5rem;
+}
+  /* -------------------------------------------------- FOOTER -------------------------------------------------- */
 
 footer {
-    height: 5rem;
-    border: solid 1px #61b12f;
+    background-color: #343434;
+    padding: 0.5rem 1rem;
+    color: white;
 }
 
-@media  screen and (max-width: 599px) {
-    .Restaurants_bloc {
-        min-width: 10rem;
-        width: 20rem;
+footer section {
+  max-width: 1440px;
+  margin: auto;
+  text-align: center;
+}
+
+h4 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 1.5rem;
+}
+
+.Footer__category {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.Footer__category i {
+  margin-right: 10px;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .Restaurants__bloc__tile {
+        width: 47%; 
     }
 
-    #Restaurants article {
+    .Functioning__center {
+      max-width: 500px;
+    }
+}
+
+
+@media  screen and (max-width: 599px) {
+    .Restaurants__bloc__tile {
         width: 100%; 
     }
 
+    footer section {
+      text-align: left;
+    }
+
+    .Footer__category {
+      justify-content: left;
+    }
 }
