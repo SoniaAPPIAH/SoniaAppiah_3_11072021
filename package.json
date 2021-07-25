@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "SoniaAppiah_3_11072021",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoniaAPPIAH/SoniaAppiah_3_11072021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SoniaAPPIAH/SoniaAppiah_3_11072021/issues"
+  },
+  "homepage": "https://github.com/SoniaAPPIAH/SoniaAppiah_3_11072021#readme"
+}
