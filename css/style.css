@@ -18,6 +18,7 @@ body {
 }
 
 header {
+  width: auto;
   text-align: center;
   background-color: white;
   padding: 1.5rem 0 0.5rem 0;
@@ -258,14 +259,41 @@ footer p {
   border-radius: 50px 50px 0 0;
   padding: 1rem 3rem;
 }
+.Menu__title {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Shrikhand", sans-serif;
+}
+.Menu__title i {
+  font-size: 1.5rem;
+}
 .Menu__bloc {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+.Menu__bloc h2 {
+  font-family: "Roboto Light", sans-serif;
 }
 .Menu__bloc__tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   background-color: white;
+  width: clamp(5rem, 25rem, 40rem);
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
-  width: 25rem;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.Menu__bloc__tile h3 {
+  margin: 0;
+}
+.Menu__bloc__tile p {
+  margin: 8px 0 0 0;
+  font-family: "Roboto Light", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
