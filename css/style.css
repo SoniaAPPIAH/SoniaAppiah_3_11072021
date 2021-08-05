@@ -16,7 +16,7 @@
   background: linear-gradient(175deg, #FF79dA, #9356DC);
   -webkit-background-clip: text;
   color: transparent;
-  transition: opacity 1500ms;
+  transition: opacity 1000ms;
   opacity: 0;
 }
 .Heart:hover .Like--linear-gradient {
@@ -26,23 +26,6 @@
 }
 .Heart:hover .Like {
   opacity: 0;
-}
-
-@font-face {
-  font-family: "Shrikhand";
-  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto Light";
-  src: url("../fonts/Roboto-Light.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto Medium";
-  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
-}
-body {
-  background: linear-gradient(175deg, #FF79dA, #9356DC);
-  font-family: "Roboto Medium", sans-serif;
 }
 
 .button {
@@ -75,6 +58,43 @@ body {
   opacity: 0;
   z-index: -1;
   transition: opacity 250ms;
+}
+
+@keyframes Menu_bloc_tile {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.delay-1 {
+  animation-delay: 0s;
+}
+.delay-2 {
+  animation-delay: 0.2s;
+}
+.delay-3 {
+  animation-delay: 0.4s;
+}
+
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Light";
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("../fonts/Roboto-Medium.ttf") format("truetype");
+}
+body {
+  background: linear-gradient(175deg, #FF79dA, #9356DC);
+  font-family: "Roboto Medium", sans-serif;
 }
 
 header {
@@ -181,6 +201,9 @@ header i {
 .Functioning__button:hover::before {
   opacity: 0.1;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.Functioning__button:hover i {
+  color: #9356DC;
 }
 .Functioning__button::before {
   content: "";
@@ -364,6 +387,8 @@ footer a {
   border-radius: 20px;
   padding: 15px 20px 15px 15px;
   margin-bottom: 1rem;
+  animation-name: Menu_bloc_tile;
+  animation-duration: 1000ms;
 }
 .Menu__bloc__tile h3 {
   margin: 0;
