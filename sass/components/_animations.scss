@@ -1,0 +1,25 @@
+@keyframes Menu_bloc_tile {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.delay- { 
+    &1 {
+        animation-delay: 0s;
+    }
+
+    &2 {
+        animation-delay: 0.2s;
+    }
+
+    &3 {
+        animation-delay: 0.4s;
+    }
+}
