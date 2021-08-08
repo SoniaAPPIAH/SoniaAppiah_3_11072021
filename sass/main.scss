@@ -27,6 +27,10 @@ body {
     font-family: 'Roboto Medium', sans-serif;
 }
 
+h1, h2, h3, h4, {
+    font-weight: normal;
+  }
+
 header {
     width: auto;
     text-align: center;
@@ -303,7 +307,7 @@ footer {
     &__title {
         position: relative;
         align-self: center;
-        width: clamp(10rem, 25rem, 40rem);
+        width: 25rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -315,39 +319,93 @@ footer {
         justify-content: space-between;
         flex-wrap: wrap;
 
+
         article {
-            width: clamp(10rem, 30%, 40rem);
-            padding: 0 10px;
+            width: clamp(8rem, 30%, 40rem);
         
         @media screen and (max-width: 1199px) {
-            width: 100%; 
+            width: 100%;
+         
         }
         }
 
         h2 {
             font-family: $font-robotoL;
+            margin-bottom: 0;
         }
 
-        &__tile {
+        &__tile  {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            position: relative;
+            overflow: hidden;
             background-color: $color-neutral;
             box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 10%);
             border-radius: 20px;
-            padding: 15px 20px 15px 15px;
+            padding: 15px 0 15px 15px;
             margin-bottom: 1rem;
             animation-name: Menu_bloc_tile;
             animation-duration: 1000ms;
+            cursor: pointer;
+
+            .test {
+                flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
 
             h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 margin: 0;
             }
 
             p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 margin: 8px 0 0 0;
                 font-family: $font-robotoL;
             }
+
+            span {
+                padding-left: 10px;
+                margin-right: 15px;
+                transition-property: margin-right;
+            }
+                    
+            &--cross {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(70px);
+                transition-property: transform;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-neutral;
+                background-color: $color-turquoise;
+                width: 70px;
+                height: 100%;
+            }
+
+            &:hover {
+                & span {
+                    margin-right: 90px;
+                }
+
+                & .Menu__bloc__tile--cross {
+                    transform: translateX(0px);
+                }
+
+                & .fas {
+                    transform: rotate(1turn);
+                }
+            }
+
         }
     
         @media screen and (max-width: 1199px) {
@@ -357,8 +415,15 @@ footer {
         }
     }
 @media screen and (max-width: 1199px) {
-    padding: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
 }
+}
+
+.Border-bottom {
+    background-color: $color-turquoise;
+    height: 5px;
+    width: 60px;
+    margin: 0.5rem 0 1.5rem 0;
 }
 
 

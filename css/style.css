@@ -1,12 +1,12 @@
 @import "../normalize.css";
 .Heart {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .Heart .Like {
   position: absolute;
   right: 1rem;
   bottom: 2rem;
-  z-index: 1;
   transition: opacity 700ms;
 }
 .Heart .Like--linear-gradient {
@@ -22,7 +22,6 @@
 .Heart:hover .Like--linear-gradient {
   opacity: 1;
   transform: scale(1);
-  z-index: 1;
 }
 .Heart:hover .Like {
   opacity: 0;
@@ -39,6 +38,7 @@
   border-radius: 30px;
   margin: 1rem 0;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   position: relative;
   z-index: 1;
 }
@@ -61,11 +61,15 @@
 }
 
 @keyframes Menu_bloc_tile {
-  from {
+  0% {
     transform: translateY(20px);
     opacity: 0;
   }
-  to {
+  1% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0px);
     opacity: 1;
   }
@@ -95,6 +99,10 @@
 body {
   background: linear-gradient(175deg, #FF79dA, #9356DC);
   font-family: "Roboto Medium", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
 }
 
 header {
@@ -355,7 +363,7 @@ footer a {
 .Menu__title {
   position: relative;
   align-self: center;
-  width: clamp(10rem, 25rem, 40rem);
+  width: 25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -367,8 +375,7 @@ footer a {
   flex-wrap: wrap;
 }
 .Menu__bloc article {
-  width: clamp(10rem, 30%, 40rem);
-  padding: 0 10px;
+  width: clamp(8rem, 30%, 40rem);
 }
 @media screen and (max-width: 1199px) {
   .Menu__bloc article {
@@ -377,25 +384,69 @@ footer a {
 }
 .Menu__bloc h2 {
   font-family: "Roboto Light", sans-serif;
+  margin-bottom: 0;
 }
 .Menu__bloc__tile {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
+  overflow: hidden;
   background-color: white;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-  padding: 15px 20px 15px 15px;
+  padding: 15px 0 15px 15px;
   margin-bottom: 1rem;
   animation-name: Menu_bloc_tile;
   animation-duration: 1000ms;
+  cursor: pointer;
+}
+.Menu__bloc__tile .test {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .Menu__bloc__tile h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin: 0;
 }
 .Menu__bloc__tile p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin: 8px 0 0 0;
   font-family: "Roboto Light", sans-serif;
+}
+.Menu__bloc__tile span {
+  padding-left: 10px;
+  margin-right: 15px;
+  transition-property: margin-right;
+}
+.Menu__bloc__tile--cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(70px);
+  transition-property: transform;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99e2d0;
+  width: 70px;
+  height: 100%;
+}
+.Menu__bloc__tile:hover span {
+  margin-right: 90px;
+}
+.Menu__bloc__tile:hover .Menu__bloc__tile--cross {
+  transform: translateX(0px);
+}
+.Menu__bloc__tile:hover .fas {
+  transform: rotate(1turn);
 }
 @media screen and (max-width: 1199px) {
   .Menu__bloc {
@@ -406,8 +457,15 @@ footer a {
 }
 @media screen and (max-width: 1199px) {
   .Menu {
-    padding: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
   }
+}
+
+.Border-bottom {
+  background-color: #99e2d0;
+  height: 5px;
+  width: 60px;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */
