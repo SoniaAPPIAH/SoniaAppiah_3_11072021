@@ -31,6 +31,47 @@ h1, h2, h3, h4, {
     font-weight: normal;
   }
 
+/* -------------------------------------------------- LOADER -------------------------------------------------- */
+
+.loading {
+    width: 100%;
+    height: 100%;
+    background-color: $background-grey;
+    z-index: 100;
+    text-align: center;
+    position: absolute;
+    animation: loading_end 1s 3s forwards;
+
+    span {
+        position: relative;
+        top: 50%;
+        margin: auto;
+        font-family: $font-shrikhand;
+        font-size: 3rem;
+        background: linear-gradient(to left, #99E2D0 0%, #FF79DA 65%, #9356DC 100%) no-repeat, $background-grey;
+        color: transparent;
+        -webkit-background-clip: text;
+        animation: anim_background 2s infinite ease-in-out;
+    }
+
+    &::after {
+        content:'';
+        background: $color-neutral;
+        display: block;
+        width: 7px;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        animation: loading_after 2s infinite ease-in-out;
+    }
+}
+
+/* -------------------------------------------------- HEADER -------------------------------------------------- */
+
 header {
     width: auto;
     text-align: center;
@@ -117,6 +158,7 @@ header {
         position: relative;
         display: flex;
         align-items: center;
+        cursor: pointer;
         background-color: #f6f6f6;
         z-index: 1;
         padding: 0 1rem 0 2.2rem;
@@ -305,13 +347,16 @@ footer {
     padding: 1rem 3rem;
 
     &__title {
-        position: relative;
         align-self: center;
         width: 25rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         font-family: 'Shrikhand', sans-serif;
+
+    @media screen and (max-width: 464px) {
+        width: 95%;
+    }
     }
 
     &__bloc {
@@ -350,23 +395,23 @@ footer {
             cursor: pointer;
 
             .test {
-                flex: 1;
+                /*  flex: 1;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                white-space: nowrap;
+                white-space: nowrap; */
             }
 
             h3 {
-                overflow: hidden;
+                /* overflow: hidden;
                 text-overflow: ellipsis;
-                white-space: nowrap;
+                white-space: nowrap;*/
                 margin: 0;
             }
 
             p {
-                overflow: hidden;
+                /* overflow: hidden;
                 text-overflow: ellipsis;
-                white-space: nowrap;
+                white-space: nowrap; */
                 margin: 8px 0 0 0;
                 font-family: $font-robotoL;
             }
@@ -375,6 +420,7 @@ footer {
                 padding-left: 10px;
                 margin-right: 15px;
                 transition-property: margin-right;
+                transition: margin-right 500ms ease;
             }
                     
             &--cross {
@@ -382,7 +428,7 @@ footer {
                 top: 0;
                 right: 0;
                 transform: translateX(70px);
-                transition-property: transform;
+                transition: transform 500ms ease;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -390,6 +436,11 @@ footer {
                 background-color: $color-turquoise;
                 width: 70px;
                 height: 100%;
+
+                & .fas {
+                    transform: rotate(0turn);
+                    transition: transform 500ms ease;
+                }
             }
 
             &:hover {

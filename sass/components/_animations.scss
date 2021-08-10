@@ -28,3 +28,53 @@
         animation-delay: 0.4s;
     }
 }
+
+
+@keyframes loading_after {
+    0%   {
+      transform:translateX(-136px);
+    }
+    
+    25% {
+      height: 50px;
+    }
+    
+    50%  {
+      height: 80px;
+      transform:translateX(140px);
+    }
+    
+    75% {
+      height: 50px;
+    }
+    
+    100% {
+      transform:translateX(-136px);
+    }
+  }
+  
+  @keyframes anim_background {		
+    0% {
+        background-size: 0% 100%;		
+    }
+
+    50% {
+        background-size: 100% 100%;
+    }  
+       
+    100% {
+        background-size: 0% 100%;
+    }
+      
+  }
+
+  @keyframes loading_end {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+        visibility: hidden;
+	}
+}
