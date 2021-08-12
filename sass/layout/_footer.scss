@@ -1,0 +1,41 @@
+footer {
+    background-color: #343434;
+    padding: 0.5rem 1rem 1rem 1rem;
+    color: $color-neutral;
+
+    section {
+        max-width: 1440px;
+        margin: auto;
+        text-align: center;
+    @media  screen and (max-width: 599px) {
+        text-align: left;
+    }
+    }
+      
+    h4 {
+        font-family: $font-shrikhand;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-neutral;
+    }
+}
+
+.Footer__category {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    i {
+        margin-right: 10px;
+    }
+@media  screen and (max-width: 599px) {
+    justify-content: left;
+} 
+}

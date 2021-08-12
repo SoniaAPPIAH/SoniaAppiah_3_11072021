@@ -1,0 +1,86 @@
+.loading {
+    width: 100%;
+    height: 100%;
+    background-color: $background-grey;
+    z-index: 100;
+    text-align: center;
+    position: fixed;
+    animation: loading_end 1s 3s forwards;
+
+    span {
+        position: relative;
+        top: 50%;
+        margin: auto;
+        font-family: $font-shrikhand;
+        font-size: 3rem;
+        background: linear-gradient(to left, #99E2D0 0%, #FF79DA 65%, #9356DC 100%) no-repeat, $background-grey;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: anim_background 2s infinite ease-in-out;
+    }
+
+    &::after {
+        content:'';
+        background: $color-neutral;
+        display: block;
+        width: 7px;
+        height: 80px;
+        position: absolute;
+        top: 50px;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:auto;
+        animation: loading_after 2s infinite ease-in-out;
+    }
+}
+
+
+@keyframes loading_after {
+    0%   {
+      transform:translateX(-136px);
+    }
+    
+    25% {
+      height: 50px;
+    }
+    
+    50%  {
+      height: 80px;
+      transform:translateX(140px);
+    }
+    
+    75% {
+      height: 50px;
+    }
+    
+    100% {
+      transform:translateX(-136px);
+    }
+  }
+  
+  @keyframes anim_background {		
+    0% {
+        background-size: 0% 100%;		
+    }
+
+    50% {
+        background-size: 100% 100%;
+    }  
+       
+    100% {
+        background-size: 0% 100%;
+    }     
+  }
+
+  @keyframes loading_end {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+        visibility: hidden;
+	}
+}

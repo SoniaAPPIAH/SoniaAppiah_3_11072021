@@ -1,0 +1,184 @@
+/* -------------------------------------------------- MAIN - INTRODUCTION -------------------------------------------------- */
+
+.Localisation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
+    background-color: #eaeaea;
+    font-size: 1.3rem;
+    padding: 1rem 0;
+
+    i {
+        margin-right: 1.2rem;
+    }
+
+    input {
+        background: none;
+        border: none;
+        width: 170px;
+    }
+}
+
+.Introduction {
+    background-color: $background-grey;
+    text-align: center;
+    max-width: 1440px;
+    margin: auto;
+    padding: 1.5rem 0 3rem 0;
+
+    p {
+        font-family: $font-robotoL;
+        font-size: 1.5rem;
+    }
+}
+
+
+  /* -------------------------------------------------- MAIN - FUNCTIONING -------------------------------------------------- */
+
+.Functioning {
+    max-width: 1376px; /* 1440px - 64 (padding 2rem x2) */
+    margin: auto;
+    background-color: $color-neutral;
+    padding: 3rem 2rem 4rem 2rem;
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1000px;
+        margin: auto;
+    @media screen and (max-width: 1023px) {
+        max-width: 300px;         
+        }
+    }
+
+    &__button-bloc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+
+    &__button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        background-color: #f6f6f6;
+        z-index: 1;
+        padding: 0 1rem 0 2.2rem;
+        margin-bottom: 1.5rem;
+        width: 15rem;
+        height: 4.5rem;
+        border-radius: 20px;
+        box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 10%);
+
+        i {
+            color: #7e7e7e;
+            font-size: 1.3rem;
+            margin-right: 1rem;
+        }
+
+        p:nth-child(1) {
+            position: absolute;
+            left: -10px;
+            background-color: $color-primary;
+            color: $color-neutral;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
+        &:hover {
+            &::before {
+                opacity: 0.1;
+                box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
+            }
+
+            i {
+                color: $color-primary;
+            }
+        }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border-radius: 20px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $color-primary;
+        opacity: 0;
+        transition: opacity 250ms;
+    }
+    }
+}
+
+    /* -------------------------------------------------- MAIN - RESTAURANTS -------------------------------------------------- */
+
+.Restaurants {
+    max-width: 1376px; /* 1440px - 64 (padding 2rem x2) */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-grey;
+    padding: 2.5rem 2rem 4rem 2rem;
+    
+    &__bloc {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        &__tile {
+            position: relative;
+            height: 15rem;
+            width: clamp(13rem, 22%, 45rem);
+            background-color: $color-neutral;
+            border-radius: 20px;
+            box-shadow: 0px 13px 10px 0px rgb(0 0 0 / 7%);
+            text-decoration: none;
+            margin-bottom: 1rem;
+        @media screen and (max-width: 1023px) {
+                width: 47%;          
+        }
+        @media  screen and (max-width: 599px) {
+                width: 100%; 
+        }
+            img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 20px 20px 0 0;
+            }
+
+            &--tag {
+                position: absolute;
+                top: 0;
+                right: 15px;
+                color: #008766;
+                background: $color-turquoise;
+                padding: 6px 13px;
+                border-radius: 3px;
+            }
+
+            &__text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: black;
+                padding: 0 20px 0 15px;
+
+                h3 {
+                    margin: 0.5rem 0 0.3rem 0;
+                }
+                  
+                p {
+                    margin: 0;
+                    font-family: $font-robotoL;
+                }
+            }
+        }
+    }   
+}

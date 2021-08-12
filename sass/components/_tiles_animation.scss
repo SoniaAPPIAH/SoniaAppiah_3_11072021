@@ -1,0 +1,32 @@
+@keyframes Menu_bloc_tile {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    1% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.delay- { 
+    &1 {
+        animation-delay: 0s;
+    }
+
+    &2 {
+        animation-delay: 0.2s;
+    }
+
+    &3 {
+        animation-delay: 0.4s;
+    }
+}
+
+

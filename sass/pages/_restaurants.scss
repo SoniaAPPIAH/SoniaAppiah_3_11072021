@@ -1,0 +1,180 @@
+.Bannier {
+    max-width: 1440px;
+    margin: auto;
+    img {
+        width: 100%;
+        max-height: 25rem;
+        object-fit: cover;
+    }
+}
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 1344px; /* 1440px - 96 (padding 3rem x2) */
+    margin: auto;
+    background-color: $background-grey;
+    position: relative;
+    margin-top: -3rem;
+    border-radius: 50px 50px 0 0;
+    padding: 1rem 3rem;
+
+    &__title {
+        align-self: center;
+        width: 25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Shrikhand', sans-serif;
+
+    @media screen and (max-width: 464px) {
+        width: 95%;
+    }
+    }
+
+    &__bloc {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        article {
+            width: clamp(8rem, 30%, 40rem);
+        
+        @media screen and (max-width: 1199px) {
+            width: 100%; 
+        }
+        }
+
+        h2 {
+            font-family: $font-robotoL;
+            margin-bottom: 0;
+        }
+
+        &__tile  {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            overflow: hidden;
+            background-color: $color-neutral;
+            box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 10%);
+            border-radius: 20px;
+            padding: 15px 0 15px 15px;
+            margin-bottom: 1rem;
+            animation-name: Menu_bloc_tile;
+            animation-duration: 1000ms;
+            cursor: pointer;
+
+            &__description {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            h3 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0;
+            }
+
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 8px 0 0 0;
+                font-family: $font-robotoL;
+            }
+
+            span {
+                padding-left: 10px;
+                margin-right: 15px;
+                transition-property: margin-right;
+                transition: margin-right 500ms ease;
+            }
+                    
+            &--cross {
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(70px);
+                transition: transform 500ms ease;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $color-neutral;
+                background-color: $color-turquoise;
+                width: 70px;
+                height: 100%;
+
+                & .fas {
+                    transform: rotate(0turn);
+                    transition: transform 500ms ease;
+                }
+            }
+
+            &:hover {
+                & span {
+                    margin-right: 90px;
+                }
+
+                & .Menu__bloc__tile--cross {
+                    transform: translateX(0px);
+                }
+
+                & .fas {
+                    transform: rotate(1turn);
+                }
+            }
+
+        }
+    
+        @media screen and (max-width: 1199px) {
+        justify-content: center; 
+        max-width: 800px;
+        margin: auto;
+        }
+    }
+@media screen and (max-width: 1199px) {
+    padding: 1rem 1.5rem;
+}
+}
+
+.Border-bottom {
+    background-color: $color-turquoise;
+    height: 5px;
+    width: 60px;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+@keyframes Menu_bloc_tile {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    1% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.delay- { 
+    &1 {
+        animation-delay: 0s;
+    }
+
+    &2 {
+        animation-delay: 0.2s;
+    }
+
+    &3 {
+        animation-delay: 0.4s;
+    }
+}
