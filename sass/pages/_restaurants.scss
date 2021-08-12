@@ -15,7 +15,7 @@
     margin: auto;
     background-color: $background-grey;
     position: relative;
-    margin-top: -3rem;
+    margin-top: -3rem; /* -3 rem pour que la partie grise se superpose sur l'image */
     border-radius: 50px 50px 0 0;
     padding: 1rem 3rem;
 
@@ -27,9 +27,9 @@
         justify-content: space-between;
         font-family: 'Shrikhand', sans-serif;
 
-    @media screen and (max-width: 464px) {
-        width: 95%;
-    }
+        @media screen and (max-width: 464px) {
+            width: 95%;
+        }
     }
 
     &__bloc {
@@ -41,9 +41,9 @@
         article {
             width: clamp(8rem, 30%, 40rem);
         
-        @media screen and (max-width: 1199px) {
-            width: 100%; 
-        }
+            @media screen and (max-width: 1199px) {
+                width: 100%; 
+            }
         }
 
         h2 {
@@ -80,7 +80,7 @@
             }
 
             p {
-                overflow: hidden;
+               overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 margin: 8px 0 0 0;
@@ -127,18 +127,22 @@
                     transform: rotate(1turn);
                 }
             }
-
         }
     
         @media screen and (max-width: 1199px) {
-        justify-content: center; 
-        max-width: 800px;
-        margin: auto;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        @media screen and (max-width: 599px) {
+            max-width: 100%;
+            margin: auto;
         }
     }
-@media screen and (max-width: 1199px) {
-    padding: 1rem 1.5rem;
-}
+
+    @media screen and (max-width: 1199px) {
+        padding: 1rem 1.5rem;
+    }
 }
 
 .Border-bottom {
@@ -150,11 +154,6 @@
 
 @keyframes Menu_bloc_tile {
     0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    1% {
         transform: translateY(20px);
         opacity: 0;
     }
@@ -176,5 +175,9 @@
 
     &3 {
         animation-delay: 0.4s;
+    }
+
+    &4 {
+        animation-delay: 0.6s;
     }
 }

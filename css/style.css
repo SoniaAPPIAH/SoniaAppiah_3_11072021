@@ -703,6 +703,11 @@ footer a {
   box-shadow: 0px 13px 10px 0px rgba(0, 0, 0, 0.07);
   text-decoration: none;
   margin-bottom: 1rem;
+  transform: scale(1);
+  transition: transform;
+}
+.Restaurants__bloc__tile:hover {
+  transform: scale(108%);
 }
 @media screen and (max-width: 1023px) {
   .Restaurants__bloc__tile {
@@ -763,6 +768,7 @@ footer a {
   background-color: #f6f6f6;
   position: relative;
   margin-top: -3rem;
+  /* -3 rem pour que la partie grise se superpose sur l'image */
   border-radius: 50px 50px 0 0;
   padding: 1rem 3rem;
 }
@@ -864,8 +870,13 @@ footer a {
 }
 @media screen and (max-width: 1199px) {
   .Menu__bloc {
-    justify-content: center;
     max-width: 800px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 599px) {
+  .Menu__bloc {
+    max-width: 100%;
     margin: auto;
   }
 }
@@ -887,10 +898,6 @@ footer a {
     transform: translateY(20px);
     opacity: 0;
   }
-  1% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
   100% {
     transform: translateY(0px);
     opacity: 1;
@@ -904,6 +911,9 @@ footer a {
 }
 .delay-3 {
   animation-delay: 0.4s;
+}
+.delay-4 {
+  animation-delay: 0.6s;
 }
 
 /*# sourceMappingURL=style.css.map */
